@@ -99,7 +99,7 @@
                         <artifactId>spring-boot-maven-plugin</artifactId>
                         <configuration>
                             <image>
-                                <name>docker.pkg.github.com/dermotmburke/${project.artifactId}/${project.artifactId}:latest</name>
+                                <name>docker.pkg.github.com/dermotmburke/${project.artifactId}/${project.artifactId}:${project.version}</name>
                                 <publish>true</publish>
                             </image>
                             <docker>

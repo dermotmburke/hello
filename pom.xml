@@ -70,15 +70,6 @@
                     </to>
                     <skip>true</skip>
                 </configuration>
-                <executions>
-                    <execution>
-                        <id>build-container</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>dockerBuild</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

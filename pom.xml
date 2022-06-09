@@ -65,8 +65,7 @@
 		</pluginRepository>
 	</pluginRepositories>
 	<scm>
-		<connection>scm:git:https://github.com/dermotmburke/hello.git</connection>
-		<url>https://github.com/dermotmburke/hello.git</url>
-	  <tag>hello-0.0.1</tag>
+		<connection>scm:git@github.com:dermotmburke/hello.git</connection>
+		<url>git@github.com:dermotmburke/hello.git</url>
   </scm>
 </project>

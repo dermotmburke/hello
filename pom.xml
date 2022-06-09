@@ -9,7 +9,7 @@
     </parent>
     <groupId>io.contino</groupId>
     <artifactId>hello</artifactId>
-    <version>0.0.16</version>
+    <version>0.0.17-SNAPSHOT</version>
     <name>hello</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -101,7 +101,7 @@
     <scm>
         <connection>scm:git:ssh://git@github.com/dermotmburke/hello.git</connection>
         <url>http://github.com/dermotmburke/hello.git</url>
-        <tag>hello-0.0.16</tag>
+        <tag>HEAD</tag>
     </scm>
     <distributionManagement>
         <repository>

@@ -84,9 +84,18 @@
                         <groupId>org.springframework.boot</groupId>
                         <artifactId>spring-boot-maven-plugin</artifactId>
                         <configuration>
-                            <layers>
-                                <enabled>true</enabled>
-                            </layers>
+                            <image>
+                                <name>docker.example.com/library/${project.artifactId}</name>
+                                <publish>true</publish>
+                            </image>
+                            <docker>
+                                <publishRegistry>
+                                    <username>dermotmburke</username>
+                                    <password>${env.DOCKER_PASS}</password>
+                                    <url>https://docker.pkg.github.com/dermotmburke/hello</url>
+                                    <email>dermotmburke@gmail.com</email>
+                                </publishRegistry>
+                            </docker>
                         </configuration>
                     </plugin>
                 </plugins>

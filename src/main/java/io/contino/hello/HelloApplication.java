@@ -10,4 +10,8 @@ public class HelloApplication {
 		SpringApplication.run(HelloApplication.class, args);
 	}
 
+	private String hello(){
+		return "hello";
+	}
+
 }

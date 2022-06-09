@@ -33,6 +33,20 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <image>
+                        <name>docker.pkg.github.com/dermotmburke/${project.artifactId}/${project.artifactId}:latest</name>
+                    </image>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>build-container</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build-image</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -85,14 +99,14 @@
                         <artifactId>spring-boot-maven-plugin</artifactId>
                         <configuration>
                             <image>
-                                <name>docker.example.com/library/${project.artifactId}</name>
+                                <name>docker.pkg.github.com/dermotmburke/${project.artifactId}/${project.artifactId}:latest</name>
                                 <publish>true</publish>
                             </image>
                             <docker>
                                 <publishRegistry>
                                     <username>dermotmburke</username>
                                     <password>${env.DOCKER_PASS}</password>
-                                    <url>https://docker.pkg.github.com/dermotmburke/hello</url>
+                                    <url>https://docker.pkg.github.com/dermotmburke/${project.artifactId}</url>
                                     <email>dermotmburke@gmail.com</email>
                                 </publishRegistry>
                             </docker>

@@ -30,10 +30,10 @@ jobs:
     - name: Prepare release
       run: mvn --batch-mode release:prepare --file pom.xml
       env:
-        USERNAME: ${{ github.actor }}
-        PASSWORD: ${{ github.token }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
     - name: Perform release
       run: mvn --batch-mode release:perform --file pom.xml
       env:
-        USERNAME: ${{ github.actor }}
-        PASSWORD: ${{ github.token }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}

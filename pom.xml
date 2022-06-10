@@ -43,7 +43,7 @@
                 <version>3.2.1</version>
                 <configuration>
                     <to>
-                        <image>docker.pkg.github.com/dermotmburke/${project.groupId}/${project.artifactId}:${project.version}</image>
+                        <image>docker.pkg.github.com/${github.org}/${project.groupId}/${project.artifactId}:${project.version}</image>
                     </to>
                 </configuration>
                 <executions>
@@ -80,7 +80,7 @@
     </pluginRepositories>
     <scm>
         <connection>scm:git:https://git@github.com/${github.org}/${project.artifactId}.git</connection>
-        <url>http://github.com/${github.org}/${project.artifactId}.git</url>
+        <url>https://github.com/${github.org}/${project.artifactId}.git</url>
         <tag>HEAD</tag>
     </scm>
     <distributionManagement>

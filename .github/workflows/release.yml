@@ -23,6 +23,10 @@ jobs:
         server-id: docker.pkg.github.com
         server-username: USERNAME
         server-password: PASSWORD
+    - name: Configure Git User
+      run: |
+        git config user.email "actions@github.com"
+        git config user.name "GitHub Actions"
     - name: Prepare release
       run: mvn --batch-mode release:prepare --file pom.xml
       env:

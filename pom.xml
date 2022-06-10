@@ -78,14 +78,14 @@
         </pluginRepository>
     </pluginRepositories>
     <scm>
-        <connection>scm:git:https://git@github.com/dermotmburke/hello.git</connection>
-        <url>http://github.com/dermotmburke/hello.git</url>
-        <tag>hello-0.0.19</tag>
+        <connection>scm:git:https://git@github.com/dermotmburke/${project.artifactId}.git</connection>
+        <url>http://github.com/dermotmburke/${project.artifactId}.git</url>
+        <tag>HEAD</tag>
     </scm>
     <distributionManagement>
         <repository>
             <id>docker.pkg.github.com</id>
-            <url>https://maven.pkg.github.com/dermotmburke/hello</url>
+            <url>https://maven.pkg.github.com/dermotmburke/${project.artifactId}</url>
         </repository>
     </distributionManagement>
 </project>

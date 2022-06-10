@@ -68,12 +68,11 @@
                             <password>${env.DOCKER_PASS}</password>
                         </auth>
                     </to>
-                    <skip>true</skip>
                 </configuration>
                 <executions>
                     <execution>
                         <id>build-container</id>
-                        <phase>package</phase>
+                        <phase>deploy</phase>
                         <goals>
                             <goal>build</goal>
                         </goals>
@@ -136,14 +135,14 @@
                             </docker>
                         </configuration>
                     </plugin>-->
-                    <plugin>
+                    <!--<plugin>
                         <groupId>com.google.cloud.tools</groupId>
                         <artifactId>jib-maven-plugin</artifactId>
                         <version>3.2.1</version>
                         <configuration>
                             <skip>false</skip>
                         </configuration>
-                    </plugin>
+                    </plugin>-->
                 </plugins>
             </build>
         </profile>

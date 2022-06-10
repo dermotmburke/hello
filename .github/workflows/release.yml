@@ -20,7 +20,16 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+        server-id: docker.pkg.github.com
+        server-username: USERNAME
+        server-password: PASSWORD
     - name: Prepare release
       run: mvn --batch-mode release:prepare --file pom.xml
+      env:
+        MAVEN_USERNAME: ${{ secrets.USERNAME }}
+        MAVEN_PASSWORD: ${{ secrets.PASSWORD }}
     - name: Perform release
       run: mvn --batch-mode release:perform --file pom.xml
+      env:
+        MAVEN_USERNAME: ${{ secrets.USERNAME }}
+        MAVEN_PASSWORD: ${{ secrets.PASSWORD }}

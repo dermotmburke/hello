@@ -83,7 +83,7 @@
     </scm>
     <distributionManagement>
         <repository>
-            <id>github</id>
+            <id>docker.pkg.github.com</id>
             <url>https://maven.pkg.github.com/dermotmburke/hello</url>
         </repository>
     </distributionManagement>

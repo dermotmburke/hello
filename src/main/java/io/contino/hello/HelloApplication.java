@@ -11,7 +11,7 @@ public class HelloApplication {
 	}
 
 	private String hello(){
-		return "hello there";
+		return "hello there again";
 	}
 
 }

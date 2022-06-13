@@ -21,7 +21,7 @@ jobs:
         git config user.email "actions@github.com"
         git config user.name "GitHub Actions"
     - name: Perform release
-      run: mvn build-helper:parse-version versions:set release:prepare -DdevelopmentVersion=${parsedVersion.majorVersion}.${parsedVersion.nextMinorVersion}.0-SNAPSHOT release:perform --file pom.xml
+      run: mvn build-helper:parse-version versions:set release:prepare -DdevelopmentVersion=\${parsedVersion.majorVersion}.\${parsedVersion.nextMinorVersion}.0-SNAPSHOT release:perform --file pom.xml
       env:
         USERNAME: $GITHUB_ACTOR
         PASSWORD: ${{ secrets.GITHUB_TOKEN }}
